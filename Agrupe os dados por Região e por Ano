@@ -12,5 +12,5 @@ df
 
 #b. Agrupe os dados por Região e por Ano;
 
-agregação = df.groupby(['Região','Ano']).count().reset_index()
+agregação = df.groupby(['Região','Ano']).size().reset_index()
 agregação
