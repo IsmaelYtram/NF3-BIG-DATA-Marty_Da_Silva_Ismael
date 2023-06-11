@@ -1,0 +1,17 @@
+#data: 11/06/23
+#Marty Da Silva Ismael (202102508444)
+
+#Obtenha o dataset do endereço https://www.w3resource.com/pythonexercises/pandas/filter/world_alcohol.csv e realize as seguintes análises (2,5 pontos):
+
+import pandas as pd
+import csv 
+df = pd.read_csv("world_alcohol.csv", encoding = 'latin-1', sep = ',')
+df.columns = ['Ano','Região','País','Tipo_cerveja','Valor']
+df.head(n=5)
+df
+
+#a. Agrupe os dados por tipo de bebidas;
+
+bebidas = df.groupby('Tipo_cerveja')['Tipo_cerveja'].count()
+print(bebidas)
+
